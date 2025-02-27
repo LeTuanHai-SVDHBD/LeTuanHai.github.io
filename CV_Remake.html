@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/IMG/DHBD-removebg-preview.png">
+  <title>CV Security</title>
+  <link rel="stylesheet" href="CV_Remake.css">
+  <script src="https://kit.fontawesome.com/7b535d27ad.js " crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="toggle-container">
+      <input type="checkbox" id="darkModeToggle">
+      <label for="darkModeToggle" class="toggle-label">
+      </label>
+    </div> 
+     <!--Start:JavaScript-->     
+     <script>
+     //Đổi ảnh nền header
+     const darkModeToggle = document.getElementById("darkModeToggle");
+     const header = document.querySelector("header"); // Chọn thẻ header
+     darkModeToggle.addEventListener("change", () => {
+     document.body.classList.toggle("dark-mode", darkModeToggle.checked);});
+     //Đổi Avatar(Class)
+     darkModeToggle.addEventListener("change", () => {
+     document.body.classList.toggle("dark-mode", darkModeToggle.checked);
+     const avatar = document.querySelector(".Avatar");
+     if (darkModeToggle.checked) {
+     avatar.src = "/IMG/Avata.png"; // Ảnh khi ở chế độ tối
+     } else {
+     avatar.src = "/IMG/AvatarMD.png"; // Ảnh khi ở chế độ sáng
+     }});
+      //Tự động mở thông tin và đóng
+      document.addEventListener("DOMContentLoaded", function () {
+     const summaries = document.querySelectorAll("details > summary");
+     summaries.forEach(summary => {
+     summary.addEventListener("click", function (event) {
+     const details = this.parentElement;
+     document.querySelectorAll("details").forEach(item => {
+     if (item !== details) {item.removeAttribute("open");}});
+     if (details.hasAttribute("open")) {
+     details.removeAttribute("open");} else {
+     details.setAttribute("open", "true");}
+     event.preventDefault();});});});
+     //Title-Button
+     const toggle = document.getElementById("darkModeToggle");
+     const label = document.querySelector(".toggle-label");
+     function updateTitle() {
+     label.setAttribute("title", toggle.checked ? "Professional Mode" : "Normal Mode");}
+     toggle.addEventListener("change", updateTitle);updateTitle();
+    </script>
+    <!--End:JavaScript--> 
+    <div class="ThongTin-TomTat">
+      <h2 title="Họ & Tên">Lê Tuấn Hải<span>🔥</span></h2>
+      <p>SINH VIÊN CÔNG NGHỆ THÔNG TIN <span>🧑‍🎓</span></p>
+      <div class="ThongTin-DanhSach">
+        <ul>
+          <li class="DanhSach l1" title="Giới Tính🚹|🚺"><span>🚹</span>&nbsp;Nam</li>
+          <li class="DanhSach l3" title="Ngày Tháng Năm Sinh(dd/mm/yyyy)"><span>🗓️</span>&nbsp;04/06/2004</li>
+          <li class="DanhSach l2" title="Số Điện Thoại(+84|VN)"><span>📞</span>&nbsp;
+            <a class="Tel" href="tel:+84355845677">0355845677</a></li>
+          <li class="DanhSach l4" title="Email(@)"><span>📧</span>&nbsp;
+            <a class="Mail" href="mailto:23050116@student.bdu.edu.vn">23050116@student.bdu.edu.vn</a></li>
+          <li class="DanhSach l5" title="Địa Chỉ📍"><span>🏠</span>&nbsp;
+            <a class="Map" href="https://maps.app.goo.gl/XRq9GQQHTAGJRUUs5">504 Đại Lộ Bình Dương,P.Hiệp Thành,TP.Thủ Dầu Một</a></li>
+        </ul>
+      </div>
+    </div>  
+    <div class="Avatar-Container">
+      <img src="/IMG/AvatarMD.png" alt="Error" class="Avatar" title="Avatar">
+      <p class="Avatar-HuyHieu HH2" title="Top 2">🥈</p>
+      <p class="Avatar-HuyHieu HH1" title="Top 1">🥇</p>
+      <p class="Avatar-HuyHieu HH3" title="Top 3">🥉</p>
+    </div>
+    <div class="BDU"><img src="IMG/BDU.png" alt="Error" title="BINH DUONG&#10;&nbsp;UNIVERSITY"></div>
+    <div class="MucTieuNgheNghiep">
+      <table>
+        <tr>
+          <td>
+           <h2><span class="icon-TieuDe" title="Mục Tiêu">🎯</span>&nbsp;Mục Tiêu Nghề Nghiệp</h2><hr>
+            <ul>
+             <li><span>🌟</span>Áp dụng kiến thức về bảo mật và an toàn</li>
+             <li><span>🌟</span>Phát triển kỹ năng phân tích rủi ro</li>
+             <li><span>🌟</span>Phòng chống tấn công mạng</li>
+             <li><span>🌟</span>Học hỏi kinh nghiệm thực tế</li>
+            </ul>
+           <h2><span class="icon-TieuDe"title="Kỹ Năng">🚀</span>&nbsp;Kỹ Năng</h2><hr>
+            <ul>
+             <li><span>🌟</span>Kiến thức bảo mật hệ thống</li>
+             <li><span>🌟</span>Phân tích đánh giá rủi ro bảo mật</li>
+             <li><span>🌟</span>Mã hóa bảo vệ dữ liệu</li>
+             <li><span>🌟</span>Lập trình bảo mật (Python, Bash)</li>
+             <li><span>🌟</span>Quản lý tường lửa</li>
+             <li><span>🌟</span>Kiểm tra ứng phó sự cố bảo mật</li>
+            </ul>
+           <h2><span class="icon-TieuDe" title="Chứng Chỉ">📜</span>&nbsp;Chứng Chỉ</h2><hr>
+            <ul>
+             <li class="DanhSach-ChungChi"><details><summary><span>🌟</span>Chứng Chỉ Lập Trình Arduino
+              <span class="icon-p">🔽</span></summary>
+              <img src="/IMG/CCArduino.png" alt="Error" title="Chứng Chỉ 1">
+               </details></li>
+             <li class="DanhSach-ChungChi"><details><summary><span>🌟</span>Chứng Chỉ Công Nghệ Thông Tin
+              <span class="icon-p">🔽</span></summary>
+              <img src="/IMG/CCCNTTCB.jpg" alt="Error" title="Chứng Chỉ 2">
+               </details></li>
+            <li class="DanhSach-ChungChi"><details><summary><span>🌟</span>Bằng Tốt Nghiệp THPT
+              <span class="icon-p">🔽</span></summary>
+             <img src="/IMG/BangTHPT.jpg" alt="Error" title="Chứng Chỉ 3">
+              </details></li>
+            <li class="DanhSach-ChungChi"><details><summary><span>🌟</span>Bằng Tốt Nghiệp THCS
+              <span class="icon-p">🔽</span></summary>
+             <img src="/IMG/BangTHCS.jpg" alt="Error" title="Chứng Chỉ 4">
+              </details></li>
+            </ul>
+           <h2><span class="icon-TieuDe" title="Giải Thưởng">🏆</span>&nbsp;Giải Thưởng</h2><hr>
+            <ul>
+             <li><span>🌟</span>Sinh Viên Năm Tốt&nbsp;<span>🎖️</span></li>
+             <li><span>🌟</span>Đạt Loại Khá&nbsp;<span>🥈</span></li>
+            </ul>
+           <h2><span class="icon-TieuDe" title="Sở Thích">🎭</span>&nbsp;Sở Thích</h2><hr>
+            <ul>
+             <li><span>🌟</span>Viết Code&nbsp;<span>👨‍💻</span></li>
+             <li><span>🌟</span>Đọc Sách&nbsp;<span>📖</span></li>
+           </ul>
+           <h2><span class="icon-TieuDe" title="Người Tham Chiếu">🧑‍💼</span>&nbsp;Người Tham Chiếu</h2><hr>
+           <ul>
+            <li><span>🌟</span>Họ & Tên:Nguyễn Văn A</li>
+            <li><span>🌟</span>Công Ty: TNHH&nbsp;<span>🏢</span></li>
+            <li><span>🌟</span>Số Điện Thoại: 0123456788&nbsp;<span>📞</span></li>
+            <li><span>🌟</span>Email: nguyenvana@gmail.com&nbsp;<span>📧</span></li>
+          </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="MucTieuNgheNghiep-Phai">
+      <table>
+        <tr>
+          <td>
+            <h2><span class="icon-TieuDe" title="Học Vấn">🎓</span>&nbsp;Trình Độ Học Vấn</h2><hr>
+            <ul>
+              <li><span>🌟</span>Trường Đại Học Bình Dương
+               <img class="img-DHBD" src="/IMG/DHBD-removebg-preview.png" title="Logo Đại Học Bình Dương" alt="Error">
+              </li>
+              <li><span>🌟</span>Ngành Công Nghệ Thông Tin(2023-2027)</li>
+              <li><span>🌟</span>Chuyên Ngành An Ninh Mạng</li>
+              <li><span>🌟</span>Xếp Loại: Khá</li>
+            </ul>
+            <h2><span class="icon-TieuDe" title="Ngôn Ngữ">🌍</span>&nbsp;Ngôn Ngữ</h2><hr>
+            <ul class="Language"> 
+              <li><span>🌟</span>Tiếng Anh Chuyên Ngành</li>
+              <li class="Language0"><span class="Error-icon">🌟</span>
+                <a href="LanguageEX.html" class="Language-View" title="Click To View EX:Code">Ngữ Máy Tính:</a> 
+                &nbsp;<img class="Language1" src="/IMG/C++.png" alt="Error" title="C++">
+                &nbsp;<img class="Language2" src="/IMG/Bash.jpg" alt="Error" title="Bash">
+                &nbsp;<img class="Language3" src="/IMG/Python.png" alt="Error" title="Python">
+                &nbsp;<img class="Language4" src="/IMG/SQL.png" alt="Error" title="SQL">
+                &nbsp;<p class="Language5" title="Ảnh bị bản quyền">C#</p></a>
+              </li>
+            </ul>
+            <h2><span class="icon-TieuDe" title="Kinh Nghiệm">💼</span>&nbsp;Kinh Nghiệm</h2><hr>
+            <ul>
+              <li><span>🌟</span>Viết script bằng Python/Bash</li>
+              <li><span>🌟</span>Giám sát & phản ứng với sự cố bảo mật</li>
+              <li><span>🌟</span>Sở hữu chứng chỉ Security(Course)</li>
+              <li><span>🌟</span>Xử lý sự cố & quản lý bảo mật</li>
+              <li><span>🌟</span>Hiểu về các tiêu chuẩn bảo mật</li>
+              <li><span>🌟</span>Thực hiện báo cáo sự cố & đề phòng</li>
+            </ul>
+            <h2><span class="icon-TieuDe" title="Hoạt Động">📢</span>&nbsp;Hoạt Động</h2><hr>
+            <ul>
+              <li><span>🌟</span>Tham gia các hoạt động đoàn</li>
+              <li><span>🌟</span>Tham gia các hoạt động của khoa</li>
+              <li><span>🌟</span>Tham gia CLB Security</li>
+              <li><span>🌟</span>Tham gia cuộc thi CTF</li>
+              <li class="DuAn"><details><summary><span>🌟</span>Các Hoạt Động Ngoại Khóa&nbsp;<span class="icon-p">🔽</span></summary>
+                <ul>
+                 <li><span>✨</span><b>HĐ1:</b>&nbsp;Mùa Hè Xanh</li>
+                 <li><span>✨</span><b>HĐ2:</b>&nbsp;Thắp Nến Tri Ân</li>
+                 <li><span>✨</span><b>HĐ3:</b>&nbsp;Gây Quỹ Từ Thiện Vì Cộng Đồng</li>
+                 <li><span>✨</span><b>HĐ4:</b>&nbsp;Chào Đón Tân Sinh Viên</li>
+                 <li><span>✨</span><b>HĐ5:</b>&nbsp;Tổ Chức Trung Thu Cho Em</li>
+                 <li><span>✨</span><b>HĐ6:</b>&nbsp;Hỗ Trợ Văn Nghệ</li>
+                 <li><span>✨</span><b>HĐ7:</b>&nbsp;Hướng Nghiệp Sinh Viên</li>
+                </ul>
+               </details></li>
+            </ul>
+            <h2><span class="icon-TieuDe" title="Dự Án">📂</span>&nbsp;Dự Án</h2><hr>
+            <ul>
+              <li class="DuAn"><details><summary><span>🌟</span>
+               <p onclick="window.open('https://tinyurl.com/2mdr4sne', '_blank')" class="DuAn-TieuDe" title="Click To View PowerPoint">Dụng AI Cho Nhà Hiện Đại</p>&nbsp;
+               <span class="icon-p">🔽</span></summary>
+               <img src="/IMG/DA1.jpg" alt="Error" title="Dự Án 1">
+               <ul class="DuAn1 CongCu">
+                <li><span>✨</span><b>Môn Học:</b>&nbsp;Phương Pháp Nghiên Cứu Khoa Học</li>
+                <li><span>✨</span><b>Giảng Viên:</b>&nbsp;Huỳnh Quang Đức</li>
+                <li><span>✨</span><b>Công Cụ:</b>&nbsp;Word,&nbsp;PowerPoint</li>
+               </ul>
+              </details></li>
+              <li class="DuAn"><details><summary><span>🌟</span>
+               <p onclick="window.open('https://tinyurl.com/2fk8rtny', '_blank')" class="DuAn-TieuDe" title="Click To View Word">Lập Trình Quản Lý Bán Hàng Siêu Thị</p>&nbsp;
+               <span class="icon-p">🔽</span></summary>
+               <img src="/IMG/DA2.jpg" alt="Error" title="Dự Án 2">
+               <ul class="DuAn2 CongCu">
+                <li><span>✨</span><b>Môn Học:</b>&nbsp;Lập Trình Hướng Đối Tượng</li>
+                <li><span>✨</span><b>Giảng Viên:</b>&nbsp;Huỳnh Tuấn Anh</li>
+                <li><span>✨</span><b>Ngôn Ngữ:</b>&nbsp;C#</li>
+                <li><span>✨</span><b>Công Cụ:</b>&nbsp;Word(2019),&nbsp;Visual Studio(2022),&nbsp;IBM Rational Rose 7.0</li>
+               </ul>
+                </details></li>
+             <li class="DuAn"><details><summary><span>🌟</span>
+              <p onclick="window.open('https://wokwi.com/projects/420484066873621505', '_blank')" class="DuAn-TieuDe" title="Click To View Wokwi">Điều Khiển Đèn LED</p>&nbsp;
+              <span class="icon-p">🔽</span></summary>
+              <img src="/IMG/DA3.jpg" alt="Error" title="Dự Án 3">
+              <ul class="DuAn3 CongCu">
+                <li><span>✨</span><b>Môn Học:</b>&nbsp;Công Nghệ IoT</li>
+                <li><span>✨</span><b>Giảng Viên:</b>&nbsp;Lê Duy Hùng</li>
+                <li><span>✨</span><b>Ngôn Ngữ:</b>&nbsp;C++</li>
+                <li><span>✨</span><b>Công Cụ:</b>&nbsp;Wokwi,&nbsp;Arduino IDE 2.3.4</li>
+               </ul>
+               </details></li>
+               <li class="DuAn"><details><summary><span>🌟</span>
+                <p onclick="window.open('https://tinyurl.com/26wk33n2', '_blank')" class="DuAn-TieuDe" title="Click To View PowerPoint">Quản Lý Thư Viện</p>&nbsp;
+                <span class="icon-p">🔽</span></summary>
+                <img src="/IMG/DA4.png" alt="Error" title="Dự Án 4">
+                <ul class="DuAn4 CongCu">
+                  <li><span>✨</span><b>Môn Học:</b>&nbsp;Cơ Sở Dữ Liệu</li>
+                  <li><span>✨</span><b>Giảng Viên:</b>&nbsp;Hồ Ngọc Giàu</li>
+                  <li><span>✨</span><b>Ngôn Ngữ:</b>&nbsp;SQL</li>
+                  <li><span>✨</span><b>Công Cụ:</b>&nbsp;SQL Server Management Studio 2022, PowerPoint(2019)</li>
+                 </ul>
+                 </details></li>
+             </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="ThankYou"><p>Chân Thành Cảm Ơn Công Ty Đã Dành Thời Gian Xem Xét CV Của Em! Mong Sớm Sẽ Nhận Được Phản Hổi!<span class="icon-ThankYou">😊</span></p></div>
+    <div class="LinkLK">
+      <marquee behavior="alternate" direction="right" scrollamount="4" loop="infinite">
+      <a href="https://zalo.me/840355845677" target="_blank"><img src="/IMG/Zalopng.png" alt="Error" title="Zalo"></a>
+      <a href="https://tinyurl.com/3w75mamz" target="_blank"><img src="/IMG/LinkedIn.png" alt="Error" title="LinkedIn"></a>
+      <a href="https://github.com/LeTuanHai-SVDHBD" target="_blank"><img src="/IMG/GitHub.png" alt="Error" title="GitHub"></a>
+      <a href="https://www.youtube.com/@Harumi_2k5" target="_blank"><img src="/IMG/Youtube.png" alt="Error" title="Youtube"></a>
+      <a href="https://accounts.google.com/signin" target="_blank"><img src="/IMG/Google.jpg" alt="Error" title="Google"></a>
+    </marquee>
+    </div>
+    <div class="DuongKe-NetDut"></div>
+  </header>
+</body>
+</html>
